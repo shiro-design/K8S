@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mvc
-        image: ngbinh14/webapp:VersionTags
+        image: ngbinh14/webapp:218c5f631f5741dd511a03e491ad8e3f67e1601d1
         ports:
         - containerPort: 80
         env:
