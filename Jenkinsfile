@@ -1,8 +1,3 @@
-def newtags(){
-    def tag = sh script: 'git rev-parse HEAD', returnStdout: true
-    return tag
-}
-
 pipeline {
     agent any
     environment{
@@ -16,4 +11,9 @@ pipeline {
         }
         
     }
+}
+
+def newtags(){
+    def tag = sh script: 'git rev-parse HEAD', returnStdout: true
+    return tag
 }
