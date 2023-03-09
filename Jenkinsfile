@@ -8,9 +8,12 @@ pipeline {
     environment{
         DOCKER_TAG = newtags()
     }
-    stages('Build Docker Images'){
-        steps{
+    stages{
+        stage('Build Docker Image'){
+           steps{
             sh "docker build -t ngbinh14/webapp:${DOCKER_TAG} ."
         }
+        }
+        
     }
 }
